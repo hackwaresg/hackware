@@ -6,13 +6,21 @@
 
 ## Initial setup
 
-1. Install npm which is part of node if you don't have it already. If you are using a Mac with brew, you can use `brew install node`.
-1. Install packages `npm i`
+1. Install [Node.js](https://nodejs.org) and [pnpm](https://pnpm.io). On a Mac with brew: `brew install node pnpm`
+1. Install packages `pnpm i`
 
 ## Running the slides
 
-- Open `index.html` in your browser or `npm start` to start the slides in the browser
+- Open `index.html` in your browser, or run `pnpm start` for a live-reloading dev server
 - Past meetups are found in [tag releases](https://github.com/sayanee/hackware/releases)
+
+## Updating reveal.js
+
+The slides use [reveal.js](https://revealjs.com). The files it needs are committed in `vendor/reveal` so the site can be served as-is from GitHub Pages.
+
+1. Bump the version: `pnpm up reveal.js --latest`
+1. Copy the files into `vendor/reveal`: `pnpm vendor`
+1. Check the slides and commit
 
 ## Edit slides
 
